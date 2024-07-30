@@ -8,8 +8,8 @@ body, h1, h2, p, ul, li {
 /* Basic Styling for Body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #121212;
+    color: #e0e0e0;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -18,10 +18,11 @@ body {
 
 /* Header Styling */
 header {
-    background: #333;
-    color: #fff;
+    background: #1e1e1e;
+    color: #e0e0e0;
     padding: 20px;
     text-align: center;
+    border-bottom: 3px solid #76c7c0;
 }
 
 nav ul {
@@ -37,21 +38,21 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1em;
 }
 
 nav a:hover {
-    color: #ff4500;
+    color: #76c7c0;
 }
 
 /* Hero Section */
 .hero {
     padding: 60px 20px;
     text-align: center;
-    background: #eaeaea;
+    background: #1e1e1e;
 }
 
 .hero h1 {
@@ -61,16 +62,18 @@ nav a:hover {
 
 .hero p {
     font-size: 1.2em;
-    color: #555;
+    color: #e0e0e0;
 }
 
 /* Main Content Styling */
 main {
     padding: 20px;
+    background: #1e1e1e;
 }
 
-section {
-    margin-bottom: 50px;
+/* Features Section */
+#features {
+    padding: 20px;
 }
 
 h2 {
@@ -79,6 +82,7 @@ h2 {
     margin-bottom: 30px;
     font-size: 2.5em;
     font-weight: 600;
+    color: #76c7c0;
 }
 
 .feature {
@@ -89,6 +93,7 @@ h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
     font-weight: 600;
+    color: #76c7c0;
 }
 
 /* Download Section Styling */
@@ -102,6 +107,9 @@ h2 {
     border-radius: 12px;
     overflow: hidden;
     color: #fff;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback background color */
 }
 
 .download-background::before {
@@ -139,9 +147,9 @@ h2 {
 
 /* Footer Styling */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     text-align: center;
     padding: 15px;
-    margin-top: auto;
+    border-top: 3px solid #76c7c0;
 }
