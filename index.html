@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- GIF Overlay -->
+    <div id="gif-overlay">
+        <img src="https://i.pinimg.com/originals/fb/f4/b4/fbf4b4b5b982c142d6b25d8bf45daa40.gif" alt="Loading GIF">
+    </div>
+
     <!-- Header -->
     <header>
         <nav>
@@ -26,7 +31,6 @@
 
     <!-- Main content -->
     <main>
-        <!-- Features Section -->
         <section id="features">
             <h2>Features</h2>
             <div class="feature">
@@ -43,14 +47,12 @@
             </div>
         </section>
 
-        <!-- Download Section -->
         <section id="download">
             <h2>Download</h2>
             <p>Ready to enhance your Minecraft experience? Click the button below to download Sky Client.</p>
             <a href="download-link" class="cta-button">Download Sky Client</a>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Us</h2>
             <p>If you have any questions or feedback, feel free to reach out to us!</p>
@@ -73,5 +75,14 @@
     <footer>
         <p>&copy; 2024 Sky Client. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript to handle the GIF overlay
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('gif-overlay').style.display = 'none';
+            }, 10000); // 10 seconds
+        };
+    </script>
 </body>
 </html>
