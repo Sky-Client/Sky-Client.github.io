@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Client - PvP Client for Minecraft 1.8.9</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <!-- GIF Overlay -->
-    <div id="gif-overlay">
-        <img src="https://i.pinimg.com/originals/fb/f4/b4/fbf4b4b5b982c142d6b25d8bf45daa40.gif" alt="Loading GIF">
-    </div>
-
-    <!-- Header -->
     <header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#download">Download</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="hero">
@@ -29,7 +23,6 @@
         </div>
     </header>
 
-    <!-- Main content -->
     <main>
         <section id="features">
             <h2>Features</h2>
@@ -48,41 +41,16 @@
         </section>
 
         <section id="download">
-            <h2>Download</h2>
-            <p>Ready to enhance your Minecraft experience? Click the button below to download Sky Client.</p>
-            <a href="download-link" class="cta-button">Download Sky Client</a>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or feedback, feel free to reach out to us!</p>
-            <form action="submit-form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="download-background">
+                <h2>Download</h2>
+                <p>Ready to enhance your Minecraft experience? Click the button below to download Sky Client.</p>
+                <a href="download-link" class="cta-button">Download Sky Client</a>
+            </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Sky Client. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript to handle the GIF overlay
-        window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('gif-overlay').style.display = 'none';
-            }, 10000); // 10 seconds
-        };
-    </script>
 </body>
 </html>
