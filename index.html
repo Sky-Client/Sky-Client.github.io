@@ -6,6 +6,46 @@
     <title>Sky Client - PvP Client for Minecraft 1.8.9</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        /* Inline CSS for Discord-like rich embed */
+        .discord-embed {
+            display: flex;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #36393f; /* Discord background color */
+            border: 1px solid #2f3136; /* Slightly darker border */
+            border-radius: 8px;
+            overflow: hidden;
+            color: #dcddde; /* Text color */
+            font-family: Arial, sans-serif;
+        }
+        .discord-embed .embed-thumbnail {
+            width: 80px;
+            height: 80px;
+            background: #2f3136; /* Thumbnail background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .discord-embed .embed-thumbnail img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+        .discord-embed .embed-content {
+            padding: 10px;
+            flex: 1;
+        }
+        .discord-embed .embed-content h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+        .discord-embed .embed-content p {
+            margin: 5px 0 0;
+            color: #b9bbbe;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -46,6 +86,18 @@
                 <p>Ready to enhance your Minecraft experience? Click the button below to download Sky Client.</p>
                 <p>------------------------------------------------------------------------------------------</p>
                 <a href="https://discord.gg/R7Vq7UAzne" class="cta-button">Download Sky Client</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="discord-embed">
+                <div class="embed-thumbnail">
+                    <img src="favicon.png" alt="Sky Client">
+                </div>
+                <div class="embed-content">
+                    <h3>Sky Client 1.8.9</h3>
+                    <p>Best PvP Client for Minecraft 1.8.9 in 2024</p>
+                </div>
             </div>
         </section>
     </main>
