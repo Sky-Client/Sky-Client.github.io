@@ -12,31 +12,44 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 0 20px;
+    padding: 0;
     overflow-x: hidden;
 }
 
-/* Container for centering the content */
-.container {
-    max-width: 1200px;
+/* GIF overlay styling */
+#gif-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
-    background: #1e1e1e;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it is on top of all other elements */
+}
+
+#gif-overlay img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* Header styling */
 header {
+    width: 100%;
     background: #1e1e1e;
     color: #e0e0e0;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
-    border-radius: 12px 12px 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
 }
 
 nav ul {
@@ -44,18 +57,18 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav a {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1em;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -67,11 +80,15 @@ nav a:hover {
 /* Hero section styling */
 .hero {
     position: relative;
-    padding: 60px 20px;
-    text-align: center;
+    width: 100%;
+    height: 100vh;
     background: url('client.png') center/cover no-repeat;
-    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: #e0e0e0;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -87,7 +104,7 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     margin-bottom: 10px;
     font-weight: 700;
     position: relative;
@@ -95,8 +112,8 @@ nav a:hover {
 }
 
 .hero p {
-    font-size: 1.3em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 30px;
     font-weight: 300;
     position: relative;
     z-index: 2;
@@ -105,12 +122,12 @@ nav a:hover {
 .cta-button {
     background-color: #76c7c0;
     color: #121212;
-    padding: 15px 30px;
+    padding: 15px 40px;
     text-decoration: none;
     border-radius: 30px; /* Rounded edges */
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
-    font-size: 1.1em;
+    font-size: 1.2em;
     position: relative;
     z-index: 2;
 }
@@ -122,7 +139,11 @@ nav a:hover {
 
 /* Main content styling */
 main {
+    width: 100%;
+    max-width: 1200px;
     padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px; /* Space for footer */
 }
 
 section {
@@ -137,6 +158,7 @@ h2 {
     font-weight: 600;
 }
 
+/* Features */
 .feature {
     margin-bottom: 30px;
 }
@@ -149,8 +171,6 @@ h2 {
 
 /* Form styling */
 form {
-    max-width: 700px;
-    margin: auto;
     background: #1e1e1e;
     padding: 30px;
     border-radius: 12px; /* Rounded edges */
@@ -199,4 +219,3 @@ footer {
     padding: 15px;
     border-radius: 0 0 12px 12px;
 }
-
