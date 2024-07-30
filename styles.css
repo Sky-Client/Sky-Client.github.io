@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 0 20px;
     overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@ body {
     background: #1e1e1e;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Header styling */
@@ -66,20 +66,40 @@ nav a:hover {
 
 /* Hero section styling */
 .hero {
+    position: relative;
     padding: 60px 20px;
     text-align: center;
+    background: url('client.png') center/cover no-repeat;
+    border-radius: 12px;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay */
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 3.5em;
     margin-bottom: 10px;
     font-weight: 700;
+    position: relative;
+    z-index: 2;
 }
 
 .hero p {
     font-size: 1.3em;
     margin-bottom: 20px;
     font-weight: 300;
+    position: relative;
+    z-index: 2;
 }
 
 .cta-button {
@@ -91,6 +111,8 @@ nav a:hover {
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
     font-size: 1.1em;
+    position: relative;
+    z-index: 2;
 }
 
 .cta-button:hover {
@@ -132,7 +154,7 @@ form {
     background: #1e1e1e;
     padding: 30px;
     border-radius: 12px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 form label {
@@ -177,3 +199,4 @@ footer {
     padding: 15px;
     border-radius: 0 0 12px 12px;
 }
+
