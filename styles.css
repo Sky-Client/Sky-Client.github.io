@@ -1,55 +1,27 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+/* General Reset */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic styling for body */
+/* Basic Styling for Body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #f5f5f5;
+    color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
-    padding: 0;
-    overflow-x: hidden;
 }
 
-/* GIF overlay styling */
-#gif-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Ensure it is on top of all other elements */
-}
-
-#gif-overlay img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-/* Header styling */
+/* Header Styling */
 header {
-    width: 100%;
-    background: #1e1e1e;
-    color: #e0e0e0;
-    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #333;
 }
 
 nav ul {
@@ -57,7 +29,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 nav ul li {
@@ -65,85 +37,36 @@ nav ul li {
 }
 
 nav a {
-    color: #e0e0e0;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1em;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1.1em;
 }
 
 nav a:hover {
-    color: #76c7c0;
-    transform: translateY(-2px);
+    color: #ff4500;
 }
 
-/* Hero section styling */
+/* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('client.png') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #e0e0e0;
+    padding: 60px 20px;
     text-align: center;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay */
-    z-index: 1;
+    background: #eaeaea;
 }
 
 .hero h1 {
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 10px;
-    font-weight: 700;
-    position: relative;
-    z-index: 2;
 }
 
 .hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    font-weight: 300;
-    position: relative;
-    z-index: 2;
-}
-
-.cta-button {
-    background-color: #76c7c0;
-    color: #121212;
-    padding: 15px 40px;
-    text-decoration: none;
-    border-radius: 30px; /* Rounded edges */
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
     font-size: 1.2em;
-    position: relative;
-    z-index: 2;
+    color: #555;
 }
 
-.cta-button:hover {
-    background-color: #5ab2a6;
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-/* Main content styling */
+/* Main Content Styling */
 main {
-    width: 100%;
-    max-width: 1200px;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 100px; /* Space for footer */
 }
 
 section {
@@ -158,7 +81,6 @@ h2 {
     font-weight: 600;
 }
 
-/* Features */
 .feature {
     margin-bottom: 30px;
 }
@@ -169,53 +91,57 @@ h2 {
     font-weight: 600;
 }
 
-/* Form styling */
-form {
-    background: #1e1e1e;
-    padding: 30px;
-    border-radius: 12px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Download Section Styling */
+.download-background {
+    position: relative;
+    background-image: url('client.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
 }
 
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-form input, form textarea {
+.download-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    background: #121212;
-    color: #e0e0e0;
-    font-size: 1em;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
 }
 
-button {
+.download-background h2, .download-background p, .download-background a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Call to Action Button Styling */
+.cta-button {
     background-color: #76c7c0;
     color: #121212;
-    border: none;
-    padding: 12px 25px;
+    padding: 15px 30px;
+    text-decoration: none;
     border-radius: 30px; /* Rounded edges */
-    cursor: pointer;
-    font-size: 1.1em;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1em;
 }
 
-button:hover {
+.cta-button:hover {
     background-color: #5ab2a6;
     transform: translateY(-2px); /* Slight lift effect */
 }
 
-/* Footer styling */
+/* Footer Styling */
 footer {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 15px;
-    border-radius: 0 0 12px 12px;
+    margin-top: auto;
 }
